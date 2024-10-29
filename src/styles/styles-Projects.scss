@@ -1,0 +1,113 @@
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+
+    .project-list {
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+        max-width: 400px;
+
+        .project-item {
+            color: rgb(253, 253, 253);
+            background-color: #3067df;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #000000;
+            }
+        }
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; // Alinear entre los extremos
+    align-items: center;
+    padding: 1rem;
+    background-color: #000000;
+
+    .back-button, .mode-button, .hamburger {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 0.7rem 1.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 0 0.5rem;
+
+        &:hover {
+            background-color: rgb(75, 75, 75);
+        }
+    }
+
+    .hamburger {
+        transform: translateY(-2.5px); // Ajusta el valor para mover el botón hacia arriba
+        font-size: 1.5rem; // Tamaño del icono de menú
+    }
+
+    .mode-button {
+        margin-right: 40px; // Margen derecho ajustado para espacio
+    }
+}
+
+.back-button {
+    transform: translateY(-5px); // Ajusta el valor para mover el botón hacia arriba
+}
+.hamburger-menu {
+    background-color: rgba(0, 0, 0, 0.9); // Fondo semi-transparente
+    position: absolute; // Posición absoluta
+    top: 60px; // Alineación vertical
+    left: 20px; // Alineación horizontal
+    border-radius: 5px;
+    z-index: 1000; // Asegura que esté por encima de otros elementos
+
+    ul {
+        list-style-type: none; // Sin puntos en la lista
+        padding: 10px; // Espaciado interno
+
+        li {
+            margin: 5px 0; // Margen entre elementos
+            a {
+                color: white; // Color del texto
+                text-decoration: none; // Sin subrayado
+
+                &:hover {
+                    text-decoration: underline; // Subrayar al pasar el ratón
+                }
+            }
+        }
+    }
+}
+
+.white-text {
+    color: rgb(255, 255, 255);
+}
+
+.dark {
+    color: rgb(207, 207, 207); // Cambia el texto a blanco
+
+    .project-item {
+        background-color: #000000; // Cambia el fondo de los items a negro
+        &hover {
+            background-color: #3067df;
+        }
+    }
+
+    .header {
+        background-color: #2b2a2c; // Cambia el fondo de la cab
+    }
+}
+
+// Clases para cambiar el background en el body
+body.dark-mode {
+    background-color: rgb(17, 17, 17); // Fondo negro cuando está en modo oscuro
+    color: white; // Texto blanco
+}

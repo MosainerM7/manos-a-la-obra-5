@@ -1,0 +1,26 @@
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  overflow: hidden;
+}
+
+.header {
+  background-color: #000000;
+  padding: 10px;
+  text-align: center;
+  width: 100%; /* Ocupa todo el ancho */
+  position: fixed; /* Fijo en la parte superior */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Para asegurarse de que esté sobre el contenido */
+}
+
+.content {
+  margin-top: 50px; /* Ajustar para que no se solape con el header */
+  padding: 20px;
+  flex: 1; /* Hace que el contenido ocupe todo el espacio restante */
+  overflow-y: auto; /* Permite hacer scroll */
+}
+
