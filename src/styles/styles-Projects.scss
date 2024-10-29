@@ -92,8 +92,8 @@
 }
 
 .dark {
-    color: rgb(207, 207, 207); // Cambia el texto a blanco
-
+    color: #ffffff; // Cambia el texto a blanco
+  
     .project-item {
         background-color: #000000; // Cambia el fondo de los items a negro
         &hover {
@@ -109,5 +109,5 @@
 // Clases para cambiar el background en el body
 body.dark-mode {
     background-color: rgb(17, 17, 17); // Fondo negro cuando está en modo oscuro
-    color: white; // Texto blanco
 }
+

@@ -56,6 +56,9 @@ export const StoriesDetails = () => {
       <h1 className="story-title">Detalles de las Historias</h1>
       <h2 className="story-description">{story && story.description}</h2>
       <TaskCard />
+      
     </div>
   );
 };
+
+
