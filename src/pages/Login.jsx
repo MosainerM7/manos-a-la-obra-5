@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useGetUsers } from '../hooks/fetchUsers';
 import { URL } from '../Constantes/consts';
+import { useAuth } from "../auth/AuthProvider"; // Asegúrate de que el path sea correcto
 import "../styles/styles-Login.scss"
 
 const Login = () => {
   const navigate = useNavigate();
+  const { login } = useAuth(); // Obtiene la función de login del contexto
   const [credentials, setCredentials] = useState({
     username: '',
     password: ''
@@ -24,7 +26,6 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch(`${URL}/login`, {
         method: 'POST',
@@ -33,11 +34,10 @@ const Login = () => {
         },
         body: JSON.stringify(credentials)
       });
-
       const data = await response.json();
-
       if (response.ok && data.token) {
         localStorage.setItem('token', data.token);
+        login(); // Actualiza el estado de autenticación
         navigate('/my-projects');
       } else {
         setError(true);
@@ -49,12 +49,11 @@ const Login = () => {
 
   if (loading) {
     return (
-      <div>
-        <div></div>
+      <div className="login-container">
+        <div className="loader"></div>
       </div>
     );
   }
-
   return (
     <div>
       <div>
