@@ -1,0 +1,65 @@
+.epics-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px; // Reducido para un aspecto más compacto
+  margin: 0 auto;
+  padding: 15px; // Espaciado ajustado
+  background-color: #ffffff; // Color de fondo
+  border-radius: 8px; // Bordes más suaves
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); // Sombra más sutil
+
+  .epic-title {
+    font-size: 2rem; // Tamaño reducido
+    text-align: center;
+    margin-bottom: 8px; // Espaciado ajustado
+    color: #000; // Color más suave
+    font-weight: 600; // Negrita sutil
+  }
+
+  .epic-description {
+    font-family: "Verdana", sans-serif; // Mantener fuente sans-serif
+    font-size: 1rem; // Tamaño reducido
+    font-weight: 400; // Peso normal
+    color: #333; // Color más suave
+    text-align: center;
+    margin-bottom: 20px; // Espaciado ajustado
+    max-width: 100%; // Max-width para adaptabilidad
+    line-height: 1.4; // Espaciado entre líneas
+  }
+
+  .story-list {
+    list-style-type: none; // Sin viñetas
+    padding: 0;
+    width: 100%;
+    max-width: 100%; // Asegura que la lista use todo el ancho disponible
+
+    .story-item {
+      background-color: #f8f8f8; // Color de fondo más claro
+      padding: 12px; // Padding ajustado
+      margin: 8px 0; // Margen ajustado
+      border-radius: 6px; // Bordes más suaves
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05); // Sombra más sutil
+      font-size: 0.9rem; // Tamaño reducido
+      color: #333; // Color más suave
+      transition: background-color 0.3s, transform 0.3s; // Transición suavizada
+
+      &:hover {
+        background-color: #0073e6; // Color al pasar el ratón
+        color: #fff; // Color de texto en hover
+        transform: translateY(-2px); // Efecto de elevación sutil
+      }
+
+      a {
+        color: inherit; // Hereda el color del contenedor en hover
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #ffcc00; // Cambia a un tono amarillo suave en hover para los enlaces
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

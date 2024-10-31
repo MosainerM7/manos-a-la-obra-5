@@ -1,0 +1,31 @@
+.project-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px; // Reducido para un aspecto más compacto
+  margin: 0 auto;
+  padding: 15px; // Espaciado ajustado
+  background-color: #ffffff; // Color de fondo
+  border-radius: 8px; // Bordes más suaves
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); // Sombra más sutil
+  transition: background-color 0.3s; // Transición para el modo oscuro
+
+  .project-title {
+    font-size: 2rem; // Tamaño reducido
+    text-align: center;
+    margin-bottom: 8px; // Espaciado ajustado
+    color: #333; // Color más suave
+    font-weight: 600; // Negrita sutil
+  }
+
+  .project-description {
+    font-family: "Verdana", sans-serif; // Mantener fuente sans-serif
+    font-size: 1rem; // Tamaño reducido
+    font-weight: 400; // Peso normal
+    color: #444; // Color más suave
+    text-align: center;
+    margin-bottom: 20px; // Espaciado ajustado
+    max-width: 100%; // Max-width para adaptabilidad
+    line-height: 1.4; // Espaciado entre líneas
+  }
+}

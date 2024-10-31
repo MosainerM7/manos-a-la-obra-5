@@ -1,0 +1,61 @@
+.project-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; // Color de fondo simplificado
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
+    .project-title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #333;
+    }
+  
+    .project-description {
+      font: 500 1.2rem Verdana, Geneva, Tahoma, sans-serif; // Combinación de propiedades
+      color: #000;
+      text-align: center;
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+  
+    .epic-list {
+      display: grid; // Usar Grid para el contenedor
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // Crear columnas flexibles
+      gap: 10px; // Espacio entre tarjetas
+      list-style: none; // Eliminación del padding
+      padding: 0;
+      width: 100%;
+      max-width: 600px;
+  
+      .epic-item {
+        margin: 0; // Eliminar el margen superior e inferior en el ítem
+  
+        .epic-card {
+          background-color: #f5f5f5; // Fondo del cuadro
+          border: 1px solid #ccc; // Borde del cuadro
+          padding: 10px; // Reducir el padding
+          border-radius: 5px; // Bordes redondeados
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra ligera
+          color: #333;
+          font-size: 0.9rem; // Reducir el tamaño de fuente para que se vea más compacto
+          text-decoration: none; // Sin subrayado
+          display: flex; // Hacer que el contenido sea flexible
+          align-items: center; // Centrar verticalmente el contenido
+  
+          transition: background-color 0.3s, transform 0.2s;
+  
+          &:hover {
+            background-color: #e0e0e0; // Cambiar color al pasar el ratón
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+  

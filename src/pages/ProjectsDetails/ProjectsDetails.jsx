@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
-import { getProjectsId } from "../hooks/fetchProjectsId";
-import EpicsCard from "../components/Epics/EpicsCard";
-import "../styles/styles-ProjectDetails.scss";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { getProjectsId } from "../../hooks/fetchProjectsId";
+import EpicsCard from "../../components/Epics/EpicsCard";
+import Header from "../Header";
+import "./styles-ProjectDetails.scss";
 
 export const ProjectsDetails = () => {
   const { projectId } = useParams();
@@ -26,20 +26,9 @@ export const ProjectsDetails = () => {
 
   return (
     <div className={`project-details-container ${darkMode ? "dark" : ""}`}>
-      <header className="header">
-        <div className="menu-container">
-          <button className="hamburger" onClick={toggleMenu}>
-            ☰
-          </button>
-          <button className="back-button" onClick={handleBack}>
-            Volver
-          </button>
-        </div>
-        <button className="mode-button" onClick={toggleDarkMode}>
-          {darkMode ? "White" : "Black"}
-        </button>
-      </header>
+      <Header>
 
+      </Header>
       {menuOpen && (
         <div className="hamburger-menu">
           <ul>
@@ -54,7 +43,7 @@ export const ProjectsDetails = () => {
         </div>
       )}
 
-      <h1 className="project-title">Detalles del proyecto</h1>
+      <h1 className="project-title">Detalles del Proyecto</h1>
       <h2 className="project-description">
         {proyecto && proyecto.description}
       </h2>

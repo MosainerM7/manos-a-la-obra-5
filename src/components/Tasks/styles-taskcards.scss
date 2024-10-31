@@ -1,0 +1,31 @@
+.task-card-container {
+    width: 100%;
+    max-width: 800px; // Máximo ancho del contenedor
+    margin: 0 auto; // Centrado automático
+    padding: 20px; // Padding interno
+    background-color: #ffffff; // Color de fondo
+    border-radius: 10px; // Bordes redondeados
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); // Sombra
+  
+    .task-list {
+      list-style-type: none; // Sin viñetas
+      padding: 0; // Sin padding
+      margin: 0; // Sin margen
+  
+      .task-item {
+        background-color: #f5f5f5; // Fondo de las tareas
+        padding: 15px; // Padding interno
+        margin: 10px 0; // Espaciado vertical entre tareas
+        border-radius: 8px; // Bordes redondeados
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); // Sombra
+        transition: all 0.3s ease; // Transición suave para hover
+  
+        &:hover {
+          background-color: #0073e6; // Cambia el color de fondo al pasar el ratón
+          color: #ffffff; // Cambia el color del texto al pasar el ratón
+          transform: scale(1.05); // Efecto de escala al pasar el ratón
+        }
+      }
+    }
+  }
+  

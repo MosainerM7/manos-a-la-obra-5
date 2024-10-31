@@ -1,0 +1,79 @@
+/* login.scss */
+
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; // Unificar la fuente
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; // Centrar el contenido verticalmente
+  background-color: #f0f0f0; // Fondo gris claro
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px; // Ancho máximo para el contenedor
+  width: 100%;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px; // Bordes redondeados
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra para destacar el formulario
+}
+
+.title,
+label {
+  color: #000000;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; // Ocupa todo el ancho del contenedor
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  box-sizing: border-box; // Evita que el padding afecte el ancho total
+}
+
+button[type="submit"] {
+  width: 100%; // Ocupa todo el ancho del formulario
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    background-color: #eee;
+    border-color: #999;
+  }
+}
+
+.error {
+  color: red;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+p {
+  font-size: 0.9rem;
+  text-align: center;
+}

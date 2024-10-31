@@ -1,0 +1,42 @@
+.story-card-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; // Color de fondo
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .story-list {
+    list-style-type: none; // Sin viñetas
+    padding: 0; // Sin padding
+    margin: 0; // Sin margen
+  
+    .story-item {
+      background-color: #f5f5f5;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background-color: #0073e6;
+        color: #fff;
+        transform: scale(1.05);
+      }
+  
+      a {
+        color: inherit; // Hereda el color del contenedor en hover
+        text-decoration: none;
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color: #ffcc00; // Color al pasar el ratón
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  

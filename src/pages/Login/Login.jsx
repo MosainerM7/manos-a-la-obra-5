@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useGetUsers } from '../hooks/fetchUsers';
-import { URL } from '../Constantes/consts';
-import { useAuth } from "../auth/AuthProvider"; // Asegúrate de que el path sea correcto
-import "../styles/styles-Login.scss"
+import { useGetUsers } from '../../hooks/fetchUsers';
+import { URL } from '../../Constantes/consts';
+import { useAuth } from "../../auth/AuthProvider";
+import "./styles-Login.scss";
+import Header from "../Header"; // Asegúrate de que la ruta sea correcta
 
 const Login = () => {
   const navigate = useNavigate();
@@ -54,15 +55,17 @@ const Login = () => {
       </div>
     );
   }
+
   return (
     <div>
-      <div>
+      {/* Header component */}
+      <Header />
+
+      <div className="login-container">
         <h2 className='title'>Iniciar Sesión</h2>
         <form onSubmit={handleSubmit}>
           <div>
-            <label className='user' 
-              htmlFor="username" 
-            >
+            <label className='user' htmlFor="username">
               Usuario
             </label>
             <input
@@ -73,15 +76,11 @@ const Login = () => {
               value={credentials.username}
               onChange={handleInputChange}
               required
-             
             />
           </div>
           
           <div>
-            <label className='password'
-              htmlFor="password" 
-             
-            >
+            <label className='password' htmlFor="password">
               Contraseña
             </label>
             <input
@@ -92,19 +91,16 @@ const Login = () => {
               value={credentials.password}
               onChange={handleInputChange}
               required
-    
             />
           </div>
 
           {error && (
-            <p>
-              Error:
+            <p className="error-message">
+              Error: Credenciales incorrectas
             </p>
           )}
 
-          <button 
-            type="submit"
-          >
+          <button type="submit" className="submit-button">
             Iniciar Sesión
           </button>
         </form>

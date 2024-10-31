@@ -1,0 +1,78 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    background-color: #000000;
+  
+    .menu-container {
+      display: flex;
+      align-items: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  
+    .back-button,
+    .mode-button,
+    .hamburger {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0 0.5rem;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: rgb(75, 75, 75);
+      }
+    }
+  
+    .hamburger {
+      transform: translateY(-2.5px);
+      font-size: 1.5rem;
+    }
+  
+    .mode-button {
+     transform: translateY(-1.5px);  
+      margin-right: 40px;
+    }
+    .back-button {
+        transform: translateY(-1.5px);  
+    }
+  }
+  
+  .hamburger-menu {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px; // Alineación vertical abajo del icono
+    left: 1rem; // Alineación horizontal cerca del icono
+    border-radius: 5px;
+    z-index: 1000;
+    padding: 10px;
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  
+      li {
+        margin: 5px 0;
+  
+        a {
+          color: white;
+          text-decoration: none;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  
+  // Estilo para el modo oscuro en el body
+  body.dark-mode {
+    background-color: rgb(17, 17, 17);
+  }
+  

@@ -1,0 +1,70 @@
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 70px; // Evita que el contenido se solape con el header
+  
+    .project-list {
+      list-style-type: none;
+      padding: 0;
+      width: 100%;
+      max-width: 400px;
+  
+      .project-item {
+        color: rgb(253, 253, 253);
+        background-color: #3067df;
+        padding: 15px;
+        margin: 10px 0;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #000000;
+        }
+      }
+    }
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100vw;
+    max-width: 100%;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  
+    .back-button, .mode-button, .hamburger {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0 0.5rem;
+  
+      &:hover {
+        background-color: rgb(75, 75, 75);
+      }
+    }
+  
+    .back-button {
+      transform: translateY(-2.5px);
+    }
+  
+    .hamburger {
+      font-size: 1.5rem;
+    }
+  
+    .mode-button {
+      margin-right: 40px;
+    }
+  }
+  
