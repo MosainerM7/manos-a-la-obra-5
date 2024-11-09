@@ -29,21 +29,6 @@ export const EpicsDetails = () => {
       <Header>
         
       </Header>
-
-      {menuOpen && (
-        <div className="hamburger-menu">
-          <ul>
-            <li>
-              <Link to="/">Inicio</Link>
-            </li>
-            <li>
-              <Link to="/about">Settings</Link>
-            </li>
-            {/* Agrega más enlaces según lo necesites */}
-          </ul>
-        </div>
-      )}
-
       <h1 className="epic-title">Detalles Épicas</h1>
       <h2 className="epic-description">{epica && epica.description}</h2>
       <StoryCard epica={epica} />

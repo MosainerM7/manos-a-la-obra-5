@@ -29,19 +29,7 @@ export const ProjectsDetails = () => {
       <Header>
 
       </Header>
-      {menuOpen && (
-        <div className="hamburger-menu">
-          <ul>
-            <li>
-              <Link to="/">Inicio</Link>
-            </li>
-            <li>
-              <Link to="/about">Settings</Link>
-            </li>
-            {/* Agrega más enlaces según lo necesites */}
-          </ul>
-        </div>
-      )}
+
 
       <h1 className="project-title">Detalles del Proyecto</h1>
       <h2 className="project-description">

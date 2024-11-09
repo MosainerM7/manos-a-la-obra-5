@@ -37,5 +37,5 @@ export const getTasks = (storyId) =>{
         fetchTasks()
       },[])
      
-    return tasks;
+    return {...tasks,refetch: fetchTasks};
 }

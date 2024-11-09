@@ -2,115 +2,34 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #ffffff; // Color de fondo
-  border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 
-  .header {
+  .content-center {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     width: 100%;
-    margin-bottom: 20px;
-
-    .menu-container {
-      display: flex;
-      align-items: center;
-
-      .hamburger {
-        margin-right: 15px;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: #ffffff; // Color del icono del menú
-        transition: color 0.2s;
-
-        &:hover {
-          color: #005bb5; // Color al pasar el ratón
-        }
-      }
-
-      .back-button {
-        padding: 8px 15px; // Ajusta el padding
-        border: none;
-        background-color: #000000; // Color de fondo
-        color: white;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s, transform 0.2s;
-
-        &:hover {
-          background-color: #005bb5; // Color al pasar el ratón
-          transform: scale(1.05); // Efecto de escala
-        }
-      }
-    }
-
-    .mode-button {
-      padding: 8px 15px; // Ajusta el padding
-      border: none;
-      background-color: #000000; // Color de fondo
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.2s;
-
-      &:hover {
-        background-color: #005bb5; // Color al pasar el ratón
-        transform: scale(1.05); // Efecto de escala
-      }
-    }
-  }
-
-  .hamburger-menu {
-    position: absolute;
-    top: 60px; // Distancia del menú desde el encabezado
-    right: 20px; // Distancia del borde derecho
-    background-color: #fff; // Fondo del menú
-    border: 1px solid #ccc; // Borde del menú
-    border-radius: 5px; // Bordes redondeados
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); // Sombra del menú
-    z-index: 1000; // Asegurar que esté por encima de otros elementos
-
-    ul {
-      list-style: none; // Sin viñetas
-      padding: 10px; // Padding interno
-      margin: 0; // Sin margen
-
-      li {
-        margin: 5px 0; // Espaciado entre elementos de la lista
-
-        a {
-          color: #0073e6; // Color de los enlaces
-          text-decoration: none; // Sin subrayado
-          transition: color 0.3s; // Transición suave de color
-
-          &:hover {
-            color: #005bb5; // Color al pasar el ratón
-          }
-        }
-      }
-    }
   }
 
   .story-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 600;
     color: #333;
+    margin-bottom: 8px;
   }
 
   .story-description {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #444; // Color más suave
-    text-align: center;
-    margin-bottom: 30px;
-    max-width: 600px;
-    line-height: 1.5; // Espaciado entre líneas
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    max-width: 90%;
   }
+
+
 }

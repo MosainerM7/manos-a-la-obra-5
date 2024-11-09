@@ -1,42 +1,92 @@
-.story-card-container {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff; // Color de fondo
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.7rem;
+  background-color: #000000;
+  color: white;
+  height: 25px; // Establecer una altura más baja
+
+  .menu-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
-  
-  .story-list {
-    list-style-type: none; // Sin viñetas
-    padding: 0; // Sin padding
-    margin: 0; // Sin margen
-  
-    .story-item {
-      background-color: #f5f5f5;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 8px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-  
-      &:hover {
-        background-color: #0073e6;
-        color: #fff;
-        transform: scale(1.05);
-      }
-  
-      a {
-        color: inherit; // Hereda el color del contenedor en hover
-        text-decoration: none;
-        transition: color 0.3s ease;
-  
-        &:hover {
-          color: #ffcc00; // Color al pasar el ratón
-          text-decoration: underline;
+
+  .back-button,
+  .mode-button,
+  .hamburger {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgb(75, 75, 75);
+    }
+  }
+
+  .hamburger {
+    font-size: 1.2rem;
+  }
+
+  .mode-button {
+    margin-right: 20px;
+  }
+
+  // Menú desplegable del menú hamburguesa
+  .hamburger-menu {
+    background-color: #000000; // Fondo negro
+    position: absolute;
+    top: 100%; // Colocar el menú debajo del icono hamburguesa
+    left: 0;
+    margin-top: 5px; // Espacio entre el icono y el menú desplegable
+    width: 200px;
+    border-radius: 5px;
+    z-index: 1000;
+    padding: 10px;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin: 5px 0;
+
+        a {
+          color: white;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
   }
-  
+
+  // Estilos responsivos
+  @media (max-width: 768px) {
+    padding: 0.4rem;
+
+    .back-button,
+    .mode-button {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+    }
+
+    .hamburger-menu {
+      width: 150px; // Ajustar tamaño en pantallas pequeñas
+    }
+  }
+}
+
+// Estilo para el modo oscuro en el body
+body.dark-mode {
+  background-color: rgb(17, 17, 17);
+}

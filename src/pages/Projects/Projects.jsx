@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { getProjects } from "../../hooks/fetchProjects";
 import { Link, useNavigate } from "react-router-dom";
+import Header from "../Header";
 import "./styles-Projects.scss";
 
 export const Projects = () => {
@@ -24,33 +25,9 @@ export const Projects = () => {
 
   return (
     <div className={`projects-container ${darkMode ? "dark" : ""}`}>
-      <header className="header">
-        <div className="menu-container">
-          <button className="hamburger" onClick={toggleMenu}>
-            ☰
-          </button>
-          <button className="back-button" onClick={handleBack}>
-            Volver
-          </button>
-        </div>
-        <button className="mode-button" onClick={toggleDarkMode}>
-          {darkMode ? "White" : "Black"}
-        </button>
-      </header>
+      <Header>
 
-      {menuOpen && (
-        <div className="hamburger-menu">
-          <ul>
-            <li>
-              <Link to="/">Inicio</Link>
-            </li>
-            <li>
-              <Link to="/about">Settings</Link>
-            </li>
-            {/* Agrega más enlaces según lo necesites */}
-          </ul>
-        </div>
-      )}
+      </Header>
 
       <h1 className={darkMode ? "white-text" : ""}>Proyectos y Tareas</h1>
       <ul className="project-list">

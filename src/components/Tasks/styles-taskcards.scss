@@ -1,31 +1,56 @@
-.task-card-container {
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .project-tasks {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
     width: 100%;
-    max-width: 800px; // Máximo ancho del contenedor
-    margin: 0 auto; // Centrado automático
-    padding: 20px; // Padding interno
-    background-color: #ffffff; // Color de fondo
-    border-radius: 10px; // Bordes redondeados
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); // Sombra
-  
-    .task-list {
-      list-style-type: none; // Sin viñetas
-      padding: 0; // Sin padding
-      margin: 0; // Sin margen
-  
-      .task-item {
-        background-color: #f5f5f5; // Fondo de las tareas
-        padding: 15px; // Padding interno
-        margin: 10px 0; // Espaciado vertical entre tareas
-        border-radius: 8px; // Bordes redondeados
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); // Sombra
-        transition: all 0.3s ease; // Transición suave para hover
-  
-        &:hover {
-          background-color: #0073e6; // Cambia el color de fondo al pasar el ratón
-          color: #ffffff; // Cambia el color del texto al pasar el ratón
-          transform: scale(1.05); // Efecto de escala al pasar el ratón
-        }
+    padding: 0;
+    list-style: none;
+  }
+
+  .add-task-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    .add-task-button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #ffffff;
+      background-color: #0073e6;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+
+      &:hover {
+        background-color: #005bb5;
+        transform: scale(1.05);
       }
     }
   }
-  
+
+  .task-loading {
+    .loader {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #0073e6;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+    }
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
