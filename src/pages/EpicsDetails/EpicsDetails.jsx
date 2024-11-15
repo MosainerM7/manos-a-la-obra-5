@@ -3,7 +3,7 @@ import StoryCard from "../../components/Stories/StoryCard";
 import { getEpicsId } from '../../hooks/fetchEpicsId';
 import { useParams, Link } from "react-router-dom";
 import "./styles-EpicDetails.scss";
-import Header from '../Header';
+import Header from '../Header/Header';
 
 export const EpicsDetails = () => {
   const { epicId } = useParams();

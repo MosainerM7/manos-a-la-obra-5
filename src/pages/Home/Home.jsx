@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../Header'; // Importa el Header
+import Header from '../Header/Header'; // Importa el Header
 import "./styles-Home.scss";
 
 export default function Home() {

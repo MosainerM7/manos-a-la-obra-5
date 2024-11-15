@@ -4,7 +4,7 @@ import { useGetUsers } from '../../hooks/fetchUsers';
 import { URL } from '../../Constantes/consts';
 import { useAuth } from "../../auth/AuthProvider";
 import "./styles-Login.scss";
-import Header from "../Header"; // Asegúrate de que la ruta sea correcta
+import Header from "../Header/Header"; // Asegúrate de que la ruta sea correcta
 
 const Login = () => {
   const navigate = useNavigate();

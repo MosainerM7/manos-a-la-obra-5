@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getProjectsId } from "../../hooks/fetchProjectsId";
 import EpicsCard from "../../components/Epics/EpicsCard";
-import Header from "../Header";
+import Header from "../Header/Header";
 import "./styles-ProjectDetails.scss";
 
 export const ProjectsDetails = () => {

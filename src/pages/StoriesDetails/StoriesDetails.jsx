@@ -3,7 +3,7 @@ import { getStoriesId } from '../../hooks/fetchStoriesId';
 import { useParams, Link } from "react-router-dom";
 import TaskCard from '../../components/Tasks/TaskCard';
 import "./styles-StoriesDetails.scss";
-import Header from '../Header';
+import Header from '../Header/Header';
 
 export const StoriesDetails = () => {
   const { storyId } = useParams();

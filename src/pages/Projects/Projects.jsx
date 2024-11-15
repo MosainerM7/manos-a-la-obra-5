@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { getProjects } from "../../hooks/fetchProjects";
 import { Link, useNavigate } from "react-router-dom";
-import Header from "../Header";
+import Header from "../Header/Header";
 import "./styles-Projects.scss";
 
 export const Projects = () => {

@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import { Projects } from "../pages/Projects/Projects";
-import Settings from "../pages/Settings";
+import Settings from "../pages/Settings/Settings";
 import { ProjectsDetails } from "../pages/ProjectsDetails/ProjectsDetails"
 import { EpicsDetails } from "../pages/EpicsDetails/EpicsDetails";
 import { StoriesDetails } from "../pages/StoriesDetails/StoriesDetails";
 import LoginPage from "../pages/Login/Login";
-import ProtectedRoute from "../pages/ProtectedRoute"; // Importa el componente ProtectedRoute
+import ProtectedRoute from "../pages/ProtectedRouter/ProtectedRoute"; // Importa el componente ProtectedRoute
 
 const router = createBrowserRouter([
     {
