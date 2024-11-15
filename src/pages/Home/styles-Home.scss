@@ -1,60 +1,62 @@
 /* styles-Home.scss */
 
-body {
-    background-image: url('../components/mi\ imagen\ de\ fondo.jpg');
-    background-color: #f0f0f0; /* Light gray background */
-    color: #333; /* Dark gray text */
-    font-family: 'Times New Roman', serif; /* Serif font for a classic look */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
 
-  body.dark-mode {
-    background-image: none; // Elimina la imagen en modo oscuro
-    background-color: rgb(56, 56, 56); // Cambia a fondo negro
+body {
+  background-image: url('../components/mi_imagen_de_fondo.jpg'); /* Asegúrate de que la ruta de la imagen esté correcta */
+  background-color: #f0f0f0; /* Fondo gris claro */
+  color: #333; /* Texto gris oscuro */
+  font-family: 'Times New Roman', serif; /* Fuente serif clásica */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
-  
-/* styles-Home.scss */
+
+/* Estilo para el contenedor principal */
 .container {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+/* Estilo para el título */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #333; /* Texto gris oscuro */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para los párrafos */
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #000000; /* Texto negro */
+}
+
+/* Estilo para el contenedor de botones */
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo para los botones */
+button {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  font-weight: bold;
+
+  &:hover {
+    background-color: #eee;
+    border-color: #999;
   }
-  
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    color: #333; /* Dark gray text */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: #000000;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: center;
-  }
-  
-  button {
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #ccc;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-    font-weight: bold;
-  
-    &:hover {
-      background-color: #eee;
-      border-color: #999;
-    }
-  }
+}
+
+/* Asegura que el body y el contenedor principal ocupen toda la altura disponible */

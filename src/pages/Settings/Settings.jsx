@@ -3,7 +3,8 @@ import React from 'react'
 export default function Settings() {
   return (
     <div>
-        <h3>las settings</h3>
+      <h1>Configuraciones</h1>
+      {/* Aquí agregarás el contenido de la página de configuración */}
     </div>
-  )
+  );
 }

@@ -11,25 +11,24 @@ export default function Header() {
   };
 
   const toggleMenu = () => {
-    setMenuOpen((prev) => !prev);
+    setMenuOpen(prev => !prev);
   };
 
   return (
-    <header className={`header ${menuOpen ? "menu-open" : ""}`}>
+    <header className="header">
       <div className="menu-container">
+        {/* Flecha para regresar */}
+        <button className="back-button" onClick={handleBack}>←</button>
+        {/* Menú hamburguesa */}
         <button className="hamburger" onClick={toggleMenu}>☰</button>
-        <button className="back-button" onClick={handleBack}>Volver</button>
       </div>
 
-      {menuOpen && (
-        <div className="hamburger-menu">
-          <ul>
-            <li><Link to="/">Inicio</Link></li>
-            <li><Link to="/about">Settings</Link></li>
-            <li><Link to="/logout">Cerrar Sesión</Link></li>
-          </ul>
-        </div>
-      )}
+      <div className={`hamburger-menu ${menuOpen ? "open" : ""}`}>
+        <ul>
+          <li><Link to="/">Inicio</Link></li>
+          <li><Link to="/logout">Cerrar Sesión</Link></li>
+        </ul>
+      </div>
     </header>
   );
 }

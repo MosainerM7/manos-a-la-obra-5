@@ -5,6 +5,7 @@ import { URL } from '../../Constantes/consts';
 import { useAuth } from "../../auth/AuthProvider";
 import "./styles-Login.scss";
 import Header from "../Header/Header"; // Asegúrate de que la ruta sea correcta
+import Footer from '../Footer/Footer';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -105,6 +106,7 @@ const Login = () => {
           </button>
         </form>
       </div>
+      <Footer /> {/* Footer al final de la página */}
     </div>
   );
 };

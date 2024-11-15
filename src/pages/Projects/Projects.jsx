@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { getProjects } from "../../hooks/fetchProjects";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import "./styles-Projects.scss";
 
 export const Projects = () => {
@@ -39,6 +40,7 @@ export const Projects = () => {
           </Link>
         ))}
       </ul>
+    <Footer /> {/* Footer al final de la página */}
     </div>
   );
 };

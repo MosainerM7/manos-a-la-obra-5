@@ -1,50 +1,73 @@
+/* Header base styles */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 1rem;
-  background-color: #1c1c1c;
-  color: white;
+  padding: 0.8rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro con transparencia */
+  color: #fff;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease; /* Transición suave */
 
+  /* Contenedor de los botones */
   .menu-container {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1rem;
 
     .back-button,
     .hamburger {
-      background-color: #2a2a2a;
-      color: white;
+      background-color: #444;
+      color: #fff;
       border: none;
-      padding: 0.6rem 1.2rem;
-      font-size: 1rem;
-      border-radius: 5px;
+      padding: 0.4rem 0.8rem; /* Botones más pequeños */
+      font-size: 1.2rem; /* Ajuste en el tamaño de fuente */
+      border-radius: 6px; /* Bordes más redondeados */
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       &:hover {
-        background-color: #3a3a3a;
+        background-color: #555; /* Color más claro al pasar el mouse */
+        transform: scale(1.05); /* Sutil animación al hacer hover */
+      }
+
+      &:active {
+        transform: scale(1); /* Resetear la escala cuando se presiona */
+      }
+
+      .hamburger {
+        font-size: 1.6rem; /* Aumentar el tamaño del icono del menú */
       }
     }
 
-    .hamburger {
-      font-size: 1.5rem;
-      padding: 0.5rem 1rem;
+    .back-button {
+      font-size: 1.2rem;
+      padding: 0.4rem 0.8rem; /* Asegurarnos de que el botón de la flecha sea pequeño */
     }
   }
 
+  /* Menú hamburguesa */
   .hamburger-menu {
     position: absolute;
-    top: 60px;
+    top: 70px;
     left: 10px;
     background-color: rgba(28, 28, 28, 0.95);
     border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 1.2rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transform: scaleY(0); /* Oculto inicialmente */
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+
+    &.open {
+      transform: scaleY(1); /* Se muestra al agregar la clase "open" */
+    }
 
     ul {
       list-style: none;
@@ -52,7 +75,7 @@
       padding: 0;
 
       li {
-        margin-bottom: 0.8rem;
+        margin-bottom: 1.2rem;
 
         &:last-child {
           margin-bottom: 0;
@@ -61,35 +84,60 @@
         a {
           color: #fff;
           text-decoration: none;
-          font-size: 1rem;
-          transition: color 0.3s;
+          font-size: 1.1rem;
+          transition: color 0.3s ease;
 
           &:hover {
-            color: #ffa500;
+            color: #ff6347; /* Color cálido al pasar el mouse */
+            text-decoration: underline;
           }
         }
       }
     }
   }
 
-  // Responsividad
+  /* Media queries */
   @media (max-width: 768px) {
+    padding: 0.8rem 1.2rem;
+
     .menu-container {
-      gap: 0.5rem;
+      gap: 1rem;
 
-      .back-button {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-      }
-
+      .back-button,
       .hamburger {
-        font-size: 1.2rem;
+        padding: 0.4rem 0.6rem;
+        font-size: 1.1rem; /* Ajuste del tamaño de fuente */
       }
     }
 
     .hamburger-menu {
-      width: 90%;
-      left: 5%;
+      width: 100%;
     }
   }
+
+  @media (max-width: 480px) {
+    .hamburger-menu {
+      padding: 1rem;
+    }
+  }
+}
+
+/* Estilos para el menú desplegable */
+.hamburger-menu.open {
+  transform: scaleY(1); /* Se activa la animación */
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  padding: 1rem;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.hamburger-menu.open {
+  display: block;
 }

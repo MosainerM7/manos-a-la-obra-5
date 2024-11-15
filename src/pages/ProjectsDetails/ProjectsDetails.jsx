@@ -3,8 +3,9 @@ import { useParams, Link } from "react-router-dom";
 import { getProjectsId } from "../../hooks/fetchProjectsId";
 import EpicsCard from "../../components/Epics/EpicsCard";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import "./styles-ProjectDetails.scss";
-
+ // 
 export const ProjectsDetails = () => {
   const { projectId } = useParams();
   const { data: proyecto } = getProjectsId(projectId);
@@ -36,6 +37,7 @@ export const ProjectsDetails = () => {
         {proyecto && proyecto.description}
       </h2>
       <EpicsCard proyecto={proyecto} />
+      <Footer /> {/* Footer al final de la página */}
     </div>
   );
 };

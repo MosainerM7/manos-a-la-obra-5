@@ -1,0 +1,56 @@
+/* styles-Footer.scss */
+
+.footer {
+    display: flex;
+    justify-content: center; /* Alinea el contenido al centro */
+    align-items: center;
+    width: 100%; /* Asegura que ocupe todo el ancho de la página */
+    padding: 0.3rem 0.5rem; /* Reducir aún más el padding */
+    background-color: #ffffff; /* Fondo claro */
+    color: #fff;
+    position: fixed; /* Fijar el footer en la parte inferior */
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.15); /* Sombra más sutil */
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: flex-start; /* Mueve el contenido a la izquierda */
+    align-items: center;
+    width: 100%; /* Asegura que ocupe todo el ancho del footer */
+  
+    .settings-button {
+      background-color: #333;
+      color: white;
+      border: none;
+      font-size: 1.2rem; /* Reducir tamaño del ícono */
+      padding: 0.4rem; /* Menos padding para hacerlo más compacto */
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+  
+      &:hover {
+        background-color: #555;
+        transform: scale(1.1); /* Efecto de escala */
+      }
+  
+      &:active {
+        transform: scale(1); /* Resetear la escala cuando se presiona */
+      }
+    }
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .footer {
+      padding: 0.5rem 0.8rem; /* Aún menos padding en pantallas pequeñas */
+    }
+  
+    .settings-button {
+      font-size: 1.1rem; /* Ajustar más el tamaño del ícono */
+      padding: 0.3rem;
+    }
+  }
+  
