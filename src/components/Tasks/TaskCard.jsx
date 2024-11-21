@@ -86,9 +86,10 @@ export default function TaskCard() {
 
   const openModal = () => {
     setTaskData({ name: '', description: '', story: storyId, done: false });
-    setIsEditing(false);
-    setIsModalOpen(true);
+    setIsEditing(false);  // No está editando
+    setIsModalOpen(true);  // Abrir modal
   };
+  
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -107,6 +108,8 @@ export default function TaskCard() {
 
   return (
     <div className="tasks-container">
+      {isModalOpen && <div className="overlay" onClick={closeModal}></div>} {/* Cerrar al hacer clic fuera */}
+  
       <div className="project-tasks">
         {tasks && tasks.map((task) => (
           <TaskItem 
@@ -117,7 +120,8 @@ export default function TaskCard() {
           />
         ))}
       </div>
-
+  
+      {/* Botón de "Agregar tarea", siempre visible */}
       <div className="add-task-container">
         <button 
           className="add-task-button"
@@ -126,7 +130,8 @@ export default function TaskCard() {
           Agregar Tarea
         </button>
       </div>
-
+  
+      {/* Modal para agregar/editar tarea */}
       {isModalOpen && (
         <FormTask
           isEditing={isEditing}
@@ -138,4 +143,5 @@ export default function TaskCard() {
       )}
     </div>
   );
+  
 }

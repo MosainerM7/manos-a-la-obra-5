@@ -5,19 +5,26 @@
   padding: 20px;
   max-width: 1000px;
   margin: 0 auto;
+  position: relative;
 
   .project-tasks {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Asegura que las tareas estén en columnas */
+    gap: 20px; /* Espacio entre las columnas */
     width: 100%;
     padding: 0;
     list-style: none;
+    margin-top: 20px; /* Para darle algo de espacio */
   }
 
   .add-task-container {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
+    z-index: 1000;
     margin-top: 20px;
 
     .add-task-button {
@@ -48,9 +55,36 @@
       animation: spin 1s linear infinite;
     }
   }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+/* Modal */
+.edit-task-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrado absoluto */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Asegurarse de que se vea sobre todo el contenido */
+  width: 90%;
+  max-width: 500px; /* Asegurarse de que no ocupe toda la pantalla */
+  overflow: hidden; /* Evita el desbordamiento de contenido */
+}
+
+/* Fondo semitransparente (opcional) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 900; /* Un poco por debajo del modal */
 }

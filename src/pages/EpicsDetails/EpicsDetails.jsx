@@ -4,6 +4,7 @@ import { getEpicsId } from '../../hooks/fetchEpicsId';
 import { useParams, Link } from "react-router-dom";
 import "./styles-EpicDetails.scss";
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 export const EpicsDetails = () => {
   const { epicId } = useParams();
@@ -32,6 +33,7 @@ export const EpicsDetails = () => {
       <h1 className="epic-title">Detalles Épicas</h1>
       <h2 className="epic-description">{epica && epica.description}</h2>
       <StoryCard epica={epica} />
+      <Footer /> {/* Footer al final de la página */}
     </div>
   );
 };

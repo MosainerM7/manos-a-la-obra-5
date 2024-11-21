@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header'; // Importa el Header
-import Footer from '../Footer/Footer';
 import "./styles-Home.scss";
 
 export default function Home() {
@@ -23,7 +22,6 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <Footer /> {/* Footer al final de la página */}
     </div>
   );
 }

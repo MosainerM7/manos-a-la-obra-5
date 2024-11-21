@@ -1,62 +1,121 @@
-/* styles-Home.scss */
-
-
+/* Fondo del body con animaciones */
 body {
-  background-image: url('../components/mi_imagen_de_fondo.jpg'); /* Asegúrate de que la ruta de la imagen esté correcta */
-  background-color: #f0f0f0; /* Fondo gris claro */
-  color: #333; /* Texto gris oscuro */
-  font-family: 'Times New Roman', serif; /* Fuente serif clásica */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-/* Estilo para el contenedor principal */
-.container {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-}
-
-/* Estilo para el título */
-h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-  color: #333; /* Texto gris oscuro */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo para los párrafos */
-p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #000000; /* Texto negro */
-}
-
-/* Estilo para el contenedor de botones */
-.buttons {
-  display: flex;
-  justify-content: center;
-}
-
-/* Estilo para los botones */
-button {
-  background-color: #fff;
+  background: radial-gradient(circle at center, #8e9eab, #eef2f3); /* Suave degradado radial */
   color: #333;
-  border: 1px solid #ccc;
-  padding: 1rem 2rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
-  &:hover {
-    background-color: #eee;
-    border-color: #999;
+/* Animación del fondo */
+@keyframes bgAnimation {
+  0% {
+    background: radial-gradient(circle at center, #8e9eab, #eef2f3);
+  }
+  100% {
+    background: radial-gradient(circle at center, #eef2f3, #8e9eab);
   }
 }
 
-/* Asegura que el body y el contenedor principal ocupen toda la altura disponible */
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Estilo del título */
+h1 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeInTitle 1.5s ease-out forwards; /* Animación de entrada */
+}
+
+/* Animación del título */
+@keyframes fadeInTitle {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo del texto */
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.4rem;
+  color: #34495e;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+}
+
+/* Animación del párrafo */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contenedor para los botones */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Espaciado entre botones */
+  opacity: 0;
+  animation: fadeInButtons 1.5s ease-out forwards;
+}
+
+/* Animación para los botones */
+@keyframes fadeInButtons {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Estilo de los botones */
+button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Degradado moderno */
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+}

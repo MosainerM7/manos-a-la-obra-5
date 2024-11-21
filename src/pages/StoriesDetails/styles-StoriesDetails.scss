@@ -1,35 +1,148 @@
-.stories-details-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    .stories-details-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+      position: relative;
+      min-height: calc(100vh - 140px);
+      overflow: hidden;
+      box-sizing: border-box;
+      
+      .content-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding-bottom: 20px;
+      }
 
-  .content-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-  }
+      .story-title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+      }
 
-  .story-title {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 8px;
-  }
+      .story-description {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 15px;
+        max-width: 85%;
+        line-height: 1.5;
+      }
 
-  .story-description {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 20px;
-    max-width: 90%;
-  }
+      .task-card-container {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
 
+      /* Botón para agregar tarea fijo en la parte inferior */
+      .add-task-btn {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #3067df;
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
 
-}
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+
+      /* Modal para agregar tarea */
+      .task-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 500px;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 2000;
+
+        &.open {
+          display: block;
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1);
+        }
+
+        .modal-header {
+          font-size: 1.5rem;
+          margin-bottom: 15px;
+        }
+
+        .modal-body {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          input, textarea {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+          }
+        }
+
+        .modal-footer {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 20px;
+
+          button {
+            background-color: #3067df;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #0056b3;
+            }
+          }
+
+          .cancel-btn {
+            background-color: #ccc;
+          }
+        }
+      }
+    }
+
+    .stories-details-container.dark {
+      background-color: #222;
+      color: #ddd;
+    }
+
+    .stories-details-container.dark .story-title {
+      color: #fff;
+    }
+
+    .stories-details-container.dark .story-description {
+      color: #bbb;
+    }

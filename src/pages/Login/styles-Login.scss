@@ -1,8 +1,7 @@
-/* Estilos generales */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Poppins', sans-serif;
+  background-color: #e0e5ec; /* Fondo suave */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,16 +15,15 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 360px; /* Menos ancho para hacer el formulario más compacto */
-  padding: 1.5rem;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  margin: auto;
+  max-width: 400px;
+  padding: 2rem;
+  background: #f9f9f9; /* Fondo del contenedor */
+  border-radius: 15px;
+  box-shadow: 8px 8px 16px #c1c7d0, -8px -8px 16px #ffffff; /* Efecto neumorfismo */
   animation: slideIn 0.3s ease-out;
+  margin: auto;
 }
 
-/* Animación de entrada */
 @keyframes slideIn {
   0% {
     opacity: 0;
@@ -38,11 +36,11 @@ body {
 }
 
 .title {
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: #333;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 form {
@@ -52,56 +50,58 @@ form {
 }
 
 label {
-  font-size: 0.95rem;
-  color: #666;
-  margin-bottom: 0.3rem;
-  font-weight: 500;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 input[type="text"],
 input[type="password"] {
   width: 100%;
-  padding: 0.7rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  background-color: #f7f7f7;
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #e0e5ec; /* Fondo neumorfista */
   color: #333;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: inset 4px 4px 8px #c1c7d0, inset -4px -4px 8px #ffffff;
+  transition: all 0.3s ease;
 
   &:focus {
-    border-color: #3b82f6;
-    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+    box-shadow: inset 4px 4px 12px #c1c7d0, inset -4px -4px 12px #ffffff, 0 0 8px #3b82f6;
     outline: none;
   }
 }
 
 button[type="submit"] {
   width: 100%;
-  padding: 0.8rem;
-  background-color: #3b82f6;
+  padding: 0.9rem;
+  background: #3b82f6; /* Azul atractivo */
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 4px 4px 8px #c1c7d0, -4px -4px 8px #ffffff;
+  transition: all 0.3s ease;
 
   &:hover {
-    background-color: #2563eb;
+    background: #2563eb; /* Azul más oscuro */
     transform: translateY(-2px);
   }
 
   &:active {
     transform: translateY(1px);
+    box-shadow: inset 2px 2px 4px #c1c7d0, inset -2px -2px 4px #ffffff;
   }
 }
 
 .error-message {
   color: #e74c3c;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   text-align: center;
   margin-top: 1rem;
 }
@@ -128,21 +128,21 @@ button[type="submit"] {
 /* Media Queries para responsividad */
 @media (max-width: 480px) {
   .login-container {
-    padding: 1.2rem;
+    padding: 1.5rem;
     width: 90%;
   }
 
   .title {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
 
   input[type="text"],
   input[type="password"] {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   button[type="submit"] {
     padding: 0.7rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }

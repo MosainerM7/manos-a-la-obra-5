@@ -106,7 +106,6 @@ const Login = () => {
           </button>
         </form>
       </div>
-      <Footer /> {/* Footer al final de la página */}
     </div>
   );
 };
