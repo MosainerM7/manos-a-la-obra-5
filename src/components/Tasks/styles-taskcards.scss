@@ -1,6 +1,7 @@
 .tasks-container {
   display: flex;
-  flex-direction: column;
+  background-color: white;
+  flex-direction: column; /* Para que los elementos estén en una sola columna */
   align-items: center;
   padding: 20px;
   max-width: 1000px;
@@ -8,13 +9,13 @@
   position: relative;
 
   .project-tasks {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Asegura que las tareas estén en columnas */
-    gap: 20px; /* Espacio entre las columnas */
+    display: flex;
+    flex-direction: column; /* Muestra las tareas en una columna */
+    gap: 20px; /* Espacio entre las tareas */
     width: 100%;
     padding: 0;
     list-style: none;
-    margin-top: 20px; /* Para darle algo de espacio */
+    margin-top: 20px;
   }
 
   .add-task-container {
@@ -62,29 +63,56 @@
   }
 }
 
-/* Modal */
-.edit-task-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centrado absoluto */
-  background-color: #fff;
-  padding: 20px;
+.task-item {
+  background-color: #f9f9f9;
   border-radius: 8px;
+  padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Asegurarse de que se vea sobre todo el contenido */
-  width: 90%;
-  max-width: 500px; /* Asegurarse de que no ocupe toda la pantalla */
-  overflow: hidden; /* Evita el desbordamiento de contenido */
-}
-
-/* Fondo semitransparente (opcional) */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 900; /* Un poco por debajo del modal */
+  max-width: 500px; /* Ajusta el tamaño para que no se expanda mucho */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .task-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .task-description {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .task-button,
+  .task-button-delete {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .task-button {
+    background-color: #0073e6;
+
+    &:hover {
+      background-color: #005bb5;
+    }
+  }
+
+  .task-button-delete {
+    background-color: #f44336;
+
+    &:hover {
+      background-color: #d32f2f;
+    }
+  }
 }

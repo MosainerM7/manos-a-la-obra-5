@@ -1,13 +1,4 @@
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #e0e5ec; /* Fondo suave */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 1rem;
-}
+
 
 .login-container {
   display: flex;
@@ -146,3 +137,5 @@ button[type="submit"] {
     font-size: 0.95rem;
   }
 }
+
+
