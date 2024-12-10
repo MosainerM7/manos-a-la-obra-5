@@ -1,3 +1,4 @@
+// src/routes/Router.jsx
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import { Projects } from "../pages/Projects/Projects";
