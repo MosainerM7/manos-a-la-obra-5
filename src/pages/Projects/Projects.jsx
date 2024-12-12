@@ -44,3 +44,5 @@ export const Projects = () => {
     </div>
   );
 };
+
+///Yo te dije venyi que los problemas no era el localstorage, 
