@@ -1,5 +1,5 @@
   import React from 'react';
-  import './styles-taskitem.scss';
+  import './styles-taskItem.scss';
 
   export default function TaskItem({ task, onEdit, onDelete }) {
     return (
