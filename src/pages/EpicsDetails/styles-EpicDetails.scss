@@ -2,61 +2,61 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 600px; // Reducido para un aspecto más compacto
+  max-width: 600px; 
   margin: 0 auto;
-  padding: 15px; // Espaciado ajustado
-  background-color: #ffffff; // Color de fondo
-  border-radius: 8px; // Bordes más suaves
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); // Sombra más sutil
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 
   .epic-title {
-    font-size: 2rem; // Tamaño reducido
+    font-size: 2rem;
     text-align: center;
-    margin-bottom: 8px; // Espaciado ajustado
-    color: #000; // Color más suave
-    font-weight: 600; // Negrita sutil
+    margin-bottom: 8px; 
+    color: #000; 
+    font-weight: 600; 
   }
 
   .epic-description {
-    font-family: "Verdana", sans-serif; // Mantener fuente sans-serif
-    font-size: 1rem; // Tamaño reducido
-    font-weight: 400; // Peso normal
-    color: #333; // Color más suave
+    font-family: "Verdana", sans-serif; 
+    font-size: 1rem; 
+    font-weight: 400; 
+    color: #333; 
     text-align: center;
-    margin-bottom: 20px; // Espaciado ajustado
-    max-width: 100%; // Max-width para adaptabilidad
-    line-height: 1.4; // Espaciado entre líneas
+    margin-bottom: 20px;
+    max-width: 100%;
+    line-height: 1.4;
   }
 
   .story-list {
-    list-style-type: none; // Sin viñetas
+    list-style-type: none;
     padding: 0;
     width: 100%;
-    max-width: 100%; // Asegura que la lista use todo el ancho disponible
+    max-width: 100%;
 
     .story-item {
-      background-color: #f8f8f8; // Color de fondo más claro
-      padding: 12px; // Padding ajustado
-      margin: 8px 0; // Margen ajustado
-      border-radius: 6px; // Bordes más suaves
-      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05); // Sombra más sutil
-      font-size: 0.9rem; // Tamaño reducido
-      color: #333; // Color más suave
-      transition: background-color 0.3s, transform 0.3s; // Transición suavizada
+      background-color: #f8f8f8;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 6px;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+      font-size: 0.9rem;
+      color: #333;
+      transition: background-color 0.3s, transform 0.3s;
 
       &:hover {
-        background-color: #0073e6; // Color al pasar el ratón
-        color: #fff; // Color de texto en hover
-        transform: translateY(-2px); // Efecto de elevación sutil
+        background-color: #0073e6;
+        color: #fff;
+        transform: translateY(-2px);
       }
 
       a {
-        color: inherit; // Hereda el color del contenedor en hover
+        color: inherit;
         text-decoration: none;
         transition: color 0.3s;
 
         &:hover {
-          color: #ffcc00; // Cambia a un tono amarillo suave en hover para los enlaces
+          color: #ffcc00;
           text-decoration: underline;
         }
       }

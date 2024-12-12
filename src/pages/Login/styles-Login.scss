@@ -1,5 +1,3 @@
-
-
 .login-container {
   display: flex;
   flex-direction: column;
@@ -8,9 +6,9 @@
   width: 100%;
   max-width: 400px;
   padding: 2rem;
-  background: #f9f9f9; /* Fondo del contenedor */
+  background: #f9f9f9;
   border-radius: 15px;
-  box-shadow: 8px 8px 16px #c1c7d0, -8px -8px 16px #ffffff; /* Efecto neumorfismo */
+  box-shadow: 8px 8px 16px #c1c7d0, -8px -8px 16px #ffffff;
   animation: slideIn 0.3s ease-out;
   margin: auto;
 }
@@ -55,7 +53,7 @@ input[type="password"] {
   border: none;
   border-radius: 12px;
   font-size: 1rem;
-  background: #e0e5ec; /* Fondo neumorfista */
+  background: #e0e5ec;
   color: #333;
   box-shadow: inset 4px 4px 8px #c1c7d0, inset -4px -4px 8px #ffffff;
   transition: all 0.3s ease;
@@ -69,7 +67,7 @@ input[type="password"] {
 button[type="submit"] {
   width: 100%;
   padding: 0.9rem;
-  background: #3b82f6; /* Azul atractivo */
+  background: #3b82f6;
   color: #fff;
   border: none;
   border-radius: 12px;
@@ -80,7 +78,7 @@ button[type="submit"] {
   transition: all 0.3s ease;
 
   &:hover {
-    background: #2563eb; /* Azul más oscuro */
+    background: #2563eb;
     transform: translateY(-2px);
   }
 
@@ -116,7 +114,6 @@ button[type="submit"] {
   }
 }
 
-/* Media Queries para responsividad */
 @media (max-width: 480px) {
   .login-container {
     padding: 1.5rem;
@@ -137,5 +134,3 @@ button[type="submit"] {
     font-size: 0.95rem;
   }
 }
-
-

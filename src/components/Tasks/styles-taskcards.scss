@@ -1,7 +1,7 @@
 .tasks-container {
   display: flex;
   background-color: white;
-  flex-direction: column; /* Para que los elementos estén en una sola columna */
+  flex-direction: column;
   align-items: center;
   padding: 20px;
   max-width: 1000px;
@@ -10,8 +10,8 @@
 
   .project-tasks {
     display: flex;
-    flex-direction: column; /* Muestra las tareas en una columna */
-    gap: 20px; /* Espacio entre las tareas */
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
     padding: 0;
     list-style: none;
@@ -69,7 +69,7 @@
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 500px; /* Ajusta el tamaño para que no se expanda mucho */
+  max-width: 500px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

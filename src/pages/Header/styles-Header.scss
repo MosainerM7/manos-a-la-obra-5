@@ -1,18 +1,16 @@
-/* Header base styles */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 1.5rem;
-  background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro con transparencia */
+  background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
   position: sticky;
   top: 0;
   z-index: 100;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease; /* Transición suave */
+  transition: background-color 0.3s ease;
 
-  /* Contenedor de los botones */
   .menu-container {
     display: flex;
     align-items: center;
@@ -23,9 +21,9 @@
       background-color: #444;
       color: #fff;
       border: none;
-      padding: 0.4rem 0.8rem; /* Botones más pequeños */
-      font-size: 1.2rem; /* Ajuste en el tamaño de fuente */
-      border-radius: 6px; /* Bordes más redondeados */
+      padding: 0.4rem 0.8rem;
+      font-size: 1.2rem;
+      border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.2s ease;
       display: flex;
@@ -33,26 +31,25 @@
       justify-content: center;
 
       &:hover {
-        background-color: #555; /* Color más claro al pasar el mouse */
-        transform: scale(1.05); /* Sutil animación al hacer hover */
+        background-color: #555;
+        transform: scale(1.05);
       }
 
       &:active {
-        transform: scale(1); /* Resetear la escala cuando se presiona */
+        transform: scale(1);
       }
 
       .hamburger {
-        font-size: 1.6rem; /* Aumentar el tamaño del icono del menú */
+        font-size: 1.6rem;
       }
     }
 
     .back-button {
       font-size: 1.2rem;
-      padding: 0.4rem 0.8rem; /* Asegurarnos de que el botón de la flecha sea pequeño */
+      padding: 0.4rem 0.8rem;
     }
   }
 
-  /* Menú hamburguesa */
   .hamburger-menu {
     position: absolute;
     top: 70px;
@@ -61,12 +58,12 @@
     border-radius: 8px;
     padding: 1.2rem;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    transform: scaleY(0); /* Oculto inicialmente */
+    transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.3s ease-in-out;
 
     &.open {
-      transform: scaleY(1); /* Se muestra al agregar la clase "open" */
+      transform: scaleY(1);
     }
 
     ul {
@@ -88,7 +85,7 @@
           transition: color 0.3s ease;
 
           &:hover {
-            color: #ff6347; /* Color cálido al pasar el mouse */
+            color: #ff6347;
             text-decoration: underline;
           }
         }
@@ -96,7 +93,6 @@
     }
   }
 
-  /* Media queries */
   @media (max-width: 768px) {
     padding: 0.8rem 1.2rem;
 
@@ -106,7 +102,7 @@
       .back-button,
       .hamburger {
         padding: 0.4rem 0.6rem;
-        font-size: 1.1rem; /* Ajuste del tamaño de fuente */
+        font-size: 1.1rem;
       }
     }
 
@@ -122,9 +118,8 @@
   }
 }
 
-/* Estilos para el menú desplegable */
 .hamburger-menu.open {
-  transform: scaleY(1); /* Se activa la animación */
+  transform: scaleY(1);
 }
 
 .hamburger-menu {
@@ -142,42 +137,38 @@
   display: block;
 }
 
-///Nuevo agregados  
-
 .back-button,
-  .mode-button {
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
-    color: #fff;
-    border: none;
-    padding: 0.7rem 1.5rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
+.mode-button {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-    }
-
-    &:active {
-      transform: translateY(1px);
-      box-shadow: none;
-    }
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
   }
 
-  .hamburger {  
-    background: none;
-    color: white;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0.7rem;
-
-    &:hover {
-      color: #00f2fe;
-    }
+  &:active {
+    transform: translateY(1px);
+    box-shadow: none;
   }
+}
 
+.hamburger {  
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.7rem;
 
+  &:hover {
+    color: #00f2fe;
+  }
+}
